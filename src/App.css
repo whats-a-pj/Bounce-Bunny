@@ -1,0 +1,23 @@
+.player {
+  position: absolute;
+  left: 50%; /* Center horizontally */
+  bottom: 0; /* Positioned at the bottom initially */
+  transform: translateX(-50%); /* Ensures exact centering */
+  transition: bottom 0.5s;
+  /* Add additional styling for player (width, height, etc.) */
+}
+
+@keyframes moveGround {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); } /* Assuming full width of the element is the screen width */
+}
+
+.ground {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 200%; /* Example size, adjust as needed */
+  height: 5px;
+  animation: moveGround 5s linear infinite; /* Adjust timing as needed */
+}
+
